@@ -132,7 +132,7 @@ google.maps.event.addDomListener(window, 'load', function() {
   var view = new storeLocator.View(map, data, {
     geolocation: false,
     features: data.getFeatures(),
-    markerIcon: 'https://image.flaticon.com/icons/png/128/123/123303.png'
+    markerIcon: 'odb96-icn.png'
   });
 
   new storeLocator.Panel(panelDiv, {
