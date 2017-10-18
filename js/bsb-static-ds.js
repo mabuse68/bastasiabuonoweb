@@ -17,8 +17,8 @@ function BsBDataSource() {
  * @private
  */
 BsBDataSource.prototype.FEATURES_ = new storeLocator.FeatureSet(
-  new storeLocator.Feature('Cafe-YES', 'Coffe-shop, Thea-room'),
-  new storeLocator.Feature('Shop-YES', 'Retailer')
+  new storeLocator.Feature('Cafe-YES', 'Coffe-shop'),
+  new storeLocator.Feature('Reta-YES', 'Retailer')
 );
 
 /**
@@ -42,7 +42,7 @@ BsBDataSource.prototype.parse_ = function(csv) {
     row = this.toObject_(headings, this.parseRow_(row));
     var features = new storeLocator.FeatureSet;
     features.add(this.FEATURES_.getById('Cafe-' + row.Cafe));
-    features.add(this.FEATURES_.getById('Shop-' + row.Shop));
+    features.add(this.FEATURES_.getById('Reta-' + row.Shop));
 
     var position = new google.maps.LatLng(row.Ycoord, row.Xcoord);
 
