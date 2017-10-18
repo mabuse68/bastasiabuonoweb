@@ -41,9 +41,9 @@ BsBDataSource.prototype.parse_ = function(csv) {
   for (var i = 1, row; row = rows[i]; i++) {
     row = this.toObject_(headings, this.parseRow_(row));
     var features = new storeLocator.FeatureSet;
-    features.add(this.FEATURES_.getById('Cafe-' + row.Cafe));
-    features.add(this.FEATURES_.getById('Reta-' + row.Shop));
-
+    /**features.add(this.FEATURES_.getById('Cafe-' + row.Cafe));
+    *features.add(this.FEATURES_.getById('Reta-' + row.Reta));
+    */
     var position = new google.maps.LatLng(row.Ycoord, row.Xcoord);
 
     var shop = this.join_([row.Shp_num_an, row.Shp_centre], ', ');
