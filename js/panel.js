@@ -132,7 +132,7 @@ google.maps.event.addDomListener(window, 'load', function() {
   var view = new storeLocator.View(map, data, {
     geolocation: false,
     features: data.getFeatures(),
-    markerIcon: 'odb96-icn.png'
+    markerIcon: 'odb32-icn.png'
   });
 
   new storeLocator.Panel(panelDiv, {
