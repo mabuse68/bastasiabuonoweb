@@ -158,7 +158,7 @@ var latLon;
 		var view = new storeLocator.View(map, data, {
 			geolocation: false,
 			features: data.getFeatures(),
-			markerIcon: '/bruttino_icon.png';
+			markerIcon: 'bruttino_icon.png'
 		});
 
 		new storeLocator.Panel(panelDiv, {
