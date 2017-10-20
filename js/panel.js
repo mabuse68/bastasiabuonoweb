@@ -161,7 +161,7 @@ var latLon;
 		var view = new storeLocator.View(map, data, {
 			geolocation: false,
 			features: data.getFeatures(),
-			markerIcon: 'cookie-marker.svg'
+			markerIcon: 'cookie-marker32.png'
 		});
 
 		new storeLocator.Panel(panelDiv, {
