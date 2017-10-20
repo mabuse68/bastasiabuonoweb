@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html">
+<head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107281319-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107281319-1');
+</script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHB5chZK6OojBdXKqsObZ0uuBf6MMx00E&libraries=places"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js">
+    </script>
+    <script src="js/store-locator.min.js"></script>
+    <script src="js/bsb-static-ds.js"></script>
+    <script src="js/panel.js"></script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-107281319-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+<title>BastaSiaBuono - Conscious bakery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css/storelocator.css">
+<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+h2,h3,h4,h5,h6 {
+    font-family: 'Sanchez', serif;
+    letter-spacing: 5px;
+}
+</style>
+<style>
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #map-canvas {
+        height: 500px;
+        margin: 0px;
+        padding: 0px
+      }
+    #panel { width: 500px; float: left; margin-right: 10px; }
+    #panel .feature-filter label { width: 150px; }
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card-2" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">BastaSiaBuono</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Products</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<!--
+    <h1 class="w3-xxlarge">Find a place where we deliver</h1>
+  </div>
+</header>
+-->
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1080px"> 
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="retailer">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Retailers, pick-up points</h1><br>
+      <div id="panel"></div>
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <div class="google-maps" >
+      <div id="map-canvas"></div>
+    </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1 class="w3-center">Suggest a store</h1><br>
+    <p>Your favourite store is not in our list... Shame on us!</p>
+    <p>You can make this straight and send us some details to contact them. If they become a BSB Point we will award you a "CookieMix Set".
+    <p>&nbsp;</p>
+    <div class="cognito">
+		<script src="https://services.cognitoforms.com/s/HC8i_ANMnUG36oLXHTlilA"></script>
+		<script>Cognito.load("forms", { id: "1" });</script>
+	</div>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Based on the responsive template of <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
+
