@@ -142,6 +142,8 @@ var latLon;
 
 	/* Needed to put everything in a function to avoid hoisting asyncs  */
 	function buildmap(latLon) {
+	
+	
 		map = new google.maps.Map(document.getElementById('map-canvas'), {
 			center: latLon,
 			zoom: 12,
@@ -151,14 +153,15 @@ var latLon;
 		*/
 			styles: styles
 		});
-	
+	 
+        
 		var panelDiv = document.getElementById('panel');
 
 		var data = new BsBDataSource;
 		var view = new storeLocator.View(map, data, {
 			geolocation: false,
 			features: data.getFeatures(),
-			markerIcon: 'bruttino_icon.png'
+			markerIcon: 'cookie-marker.svg'
 		});
 
 		new storeLocator.Panel(panelDiv, {
