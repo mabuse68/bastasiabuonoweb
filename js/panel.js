@@ -144,7 +144,7 @@ var latLon;
 	function buildmap(latLon) {
 		map = new google.maps.Map(document.getElementById('map-canvas'), {
 			center: latLon,
-			zoom: 11,
+			zoom: 12,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			/**
 		* Set the map style
@@ -157,7 +157,8 @@ var latLon;
 		var data = new BsBDataSource;
 		var view = new storeLocator.View(map, data, {
 			geolocation: false,
-			features: data.getFeatures()
+			features: data.getFeatures(),
+			markerIcon: '/bruttino_icon.png';
 		});
 
 		new storeLocator.Panel(panelDiv, {
