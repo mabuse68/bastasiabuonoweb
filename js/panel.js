@@ -165,7 +165,8 @@ var latLon;
 		});
 
 		new storeLocator.Panel(panelDiv, {
-			view: view
+			view: view,
+			locationSearchLabel: 'Enter a location:'
 	});
   };
 

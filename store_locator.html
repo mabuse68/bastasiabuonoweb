@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html">
 <head>
+
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107281319-1"></script>
 <script>
@@ -29,8 +30,9 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-<title>BastaSiaBuono - Conscious bakery</title>
+<title>BastaSiaBuono - Find a retailer</title>
 <meta charset="UTF-8">
+<meta name="description" content="Find retailers of our delicious vegan and animal-free cookies" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -46,23 +48,16 @@ h2,h3,h4,h5,h6 {
 <style>
     .google-maps {
         position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
+        padding-bottom: 5%; // This is the aspect ratio
         height: 0;
         overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
     }
     #map-canvas {
         height: 500px;
         margin: 0px;
         padding: 0px
       }
-    #panel { width: 500px; float: left; margin-right: 10px; }
+    #panel { width: 100%; float: left; margin-right: 10px; }
     #panel .feature-filter label { width: 150px; }
 </style>
 </head>
@@ -71,47 +66,52 @@ h2,h3,h4,h5,h6 {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card-2" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">BastaSiaBuono</a>
+    <a href="home.html#home" class="w3-bar-item w3-button">BastaSiaBuono</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#menu" class="w3-bar-item w3-button">Products</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="home.html#about" class="w3-bar-item w3-button">About</a>
+      <a href="home.html#menu" class="w3-bar-item w3-button">Products</a>
+      <a href="home.html#buy" class="w3-bar-item w3-button">Buy</a>
+      <a href="contact_us.html" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
 </div>
 
 <!-- Header -->
-<!--
-    <h1 class="w3-xxlarge">Find a place where we deliver</h1>
-  </div>
+<header class="w3-display-container w3-content w3-wide" style="max-width:1920px;min-width:400px" id="home">
+<img class="w3-image" src="img/befanino-twin.jpg" alt="Twin Vegan Cookies" >
+  
 </header>
--->
+
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1080px"> 
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="retailer">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Retailers, pick-up points</h1><br>
-      <div id="panel"></div>
-    </div>
+<div class="w3-center w3-padding-large w3-opacity">
+  <h1 class="w3-xxlarge">Where to find BastaSiaBuono Cookies</h1>
+  <p class="w3-center">Whether you look to replenish your cookie supply or  
+  you feel like a low-cal afternoon tea, we got you covered!</p>
     
-    <div class="w3-col l6 w3-padding-large">
-      <div class="google-maps" >
-      <div id="map-canvas"></div>
-    </div>
-    </div>
-  </div>
+	</div>
+		<!-- Menu Section -->
+		<div class="w3-row w3-padding-64" id="retailer">
+			<div class="w3-col l6 w3-padding-large">
+				<div id="panel"></div>
+			</div>
+		
+			<div class="w3-col l6 w3-padding-large">
+				<div class="google-maps" >
+				<div id="map-canvas"></div>
+			</div>
+		</div>
+	</div>
 
   <hr>
-
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1 class="w3-center">Suggest a store</h1><br>
-    <p>Your favourite store is not in our list... Shame on us!</p>
-    <p>You can make this straight and send us some details to contact them. If they become a BSB Point we will award you a "CookieMix Set".
-    <p>&nbsp;</p>
+  <div class="w3-container w3-padding-64">
+    <h1 class="w3-center">Suggest a store</h1>
+    <p class="w3-center">Your favourite store is not in our list... Shame on us!</p>
+    <p class="w3-center">You can make this straight and send us some details to contact them. If they become a BastaSiaBuono Point we will be very happy to send you a voucher for a free "Cookie-Mix Set".</p>
+	  <p class="w3-center"><a href="/contact_us.html#contact">Yes, make my favourite store a BastaSiaBuono Point!</a></p>
 	</div>
   </div>
   

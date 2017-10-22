@@ -17,8 +17,8 @@ function BsBDataSource() {
  * @private
  */
 BsBDataSource.prototype.FEATURES_ = new storeLocator.FeatureSet(
-  new storeLocator.Feature('Cafe-YES', 'Coffe-shop'),
-  /*new storeLocator.Feature('Reta-YES', 'Retailer or Bakery')*/
+  new storeLocator.Feature('Coffee-YES', ' Coffee shop'),
+  new storeLocator.Feature('Reta-YES', ' Retailer or Bakery')
 );
 
 /**
@@ -41,8 +41,8 @@ BsBDataSource.prototype.parse_ = function(csv) {
   for (var i = 1, row; row = rows[i]; i++) {
     row = this.toObject_(headings, this.parseRow_(row));
     var features = new storeLocator.FeatureSet;
-    features.add(this.FEATURES_.getById('Cafe-' + row.Cafe));
-    /*features.add(this.FEATURES_.getById('Reta-' + row.Reta));*/
+    features.add(this.FEATURES_.getById('Coffee-' + row.Coffee));
+    features.add(this.FEATURES_.getById('Reta-' + row.Reta));
     
     var position = new google.maps.LatLng(row.Ycoord, row.Xcoord);
 
@@ -52,7 +52,7 @@ BsBDataSource.prototype.parse_ = function(csv) {
     var store = new storeLocator.Store(row.uuid, position, features, {
       title: row.Fcilty_nam,
       address: this.join_([shop, row.Street_add, locality], '<br>'),
-      hours: row.Hrs_of_bus,
+      misc: row.Hrs_of_bus,
       web: row.web
     });
     stores.push(store);
@@ -87,10 +87,9 @@ BsBDataSource.prototype.parseRow_ = function(row) {
   if (row.charAt(0) == '"') {
     row = row.substring(1);
   }
-  // Strip trailing quote. There seems to be a character between the last quote
-  // and the line ending, hence 2 instead of 1.
-  if (row.charAt(row.length - 2) == '"') {
-    row = row.substring(0, row.length - 2);
+  // Strip trailing quote.
+  if (row.charAt(row.length - 1) == '"') {
+    row = row.substring(0, row.length - 1);
   }
 
   row = row.split('","');
