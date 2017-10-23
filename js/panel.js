@@ -1,10 +1,12 @@
 
 google.maps.event.addDomListener(window, 'load', function() {
-var latLon;
+ /**
+ * Function scope variable for position
+ */
+    var latLon;
  /**
  * map styles
  */
- 
 	var styles = [
 	{elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
 			{elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
@@ -128,16 +130,22 @@ var latLon;
 	/* Check if Geo-location is supported, then choose the center of the map */
 	if (navigator.geolocation) {
 	/* Center = user location  */
-		navigator.geolocation.getCurrentPosition(showposition);
+		navigator.geolocation.getCurrentPosition(geoPosition, geoError);
 	} else {
 	/* Center = BSB atelier  */
 		latLon = new google.maps.LatLng(51.2051, 4.4254);
 		 buildmap(latLon);
 	};
 
-	function showposition(position) {
+	function geoPosition(position) {
 		latLon = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 		buildmap(latLon);
+	};
+    
+	function geoError(error) {
+    /* Default to BSB Atelier BE */
+		latLon = new google.maps.LatLng(51.2051, 4.4254);
+		 buildmap(latLon);
 	};
 
 	/* Needed to put everything in a function to avoid hoisting asyncs  */
