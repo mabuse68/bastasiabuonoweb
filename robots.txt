@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /unused*/ /css*/ /js/
+Disallow: /unused/ 
+Disallow: /css/
+Disallow: /js/
