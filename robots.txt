@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /unused/ 
 Disallow: /css/
 Disallow: /js/
+Sitemap: https://bastasiabuono.be/sitemap_location.txt
